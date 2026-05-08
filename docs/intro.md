@@ -11,6 +11,9 @@ spells, NPCs, quests, classes, crafts, achievements. Most pages are
 auto-generated from the live game database; the rest is written by players
 like you.
 
+## Main guide
+The most comprehensive guide for the game can be found in this Steam Community post: **[Pirate Souls Is Tough, Let me Guide you!](https://steamcommunity.com/sharedfiles/filedetails/?id=2833627512)**
+
 ## Editing a page
 
 1. Open any article.
