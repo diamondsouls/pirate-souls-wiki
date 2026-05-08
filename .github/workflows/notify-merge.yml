@@ -1,0 +1,44 @@
+name: Notify edit-service of merged PR
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+# Fires when a PR is closed *and merged*. Posts (pr_number, commit_sha) to
+# the private edit-service so it can record the (player_id, commit_sha)
+# attribution into contributions.db.
+#
+# Required secrets:
+#   EDIT_SERVICE_URL    e.g. https://wiki-edit.example.com
+#   EDIT_SERVICE_SECRET shared HMAC secret matching $WIKI_WEBHOOK_SECRET on the service
+
+jobs:
+  notify:
+    if: ${{ github.event.pull_request.merged == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST to edit-service
+        env:
+          URL: ${{ secrets.EDIT_SERVICE_URL }}
+          SECRET: ${{ secrets.EDIT_SERVICE_SECRET }}
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.merge_commit_sha }}
+        run: |
+          if [ -z "$URL" ]; then
+            echo "EDIT_SERVICE_URL not set; skipping."
+            exit 0
+          fi
+          PAYLOAD=$(jq -nc --arg pr "$PR" --arg sha "$SHA" \
+            '{pr_number: ($pr | tonumber), commit_sha: $sha}')
+          if [ -n "$SECRET" ]; then
+            SIG="sha256=$(printf '%s' "$PAYLOAD" | openssl dgst -sha256 -hmac "$SECRET" -hex | awk '{print $2}')"
+            curl -fsS -X POST "$URL/merged" \
+              -H "Content-Type: application/json" \
+              -H "X-Hub-Signature-256: $SIG" \
+              -d "$PAYLOAD"
+          else
+            curl -fsS -X POST "$URL/merged" \
+              -H "Content-Type: application/json" \
+              -d "$PAYLOAD"
+          fi

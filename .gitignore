@@ -1,0 +1,11 @@
+node_modules/
+.docusaurus/
+build/
+.cache-loader/
+.DS_Store
+*.log
+
+# Local env files (keep .env.example tracked)
+.env
+.env.local
+.env.*.local
