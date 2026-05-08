@@ -10,6 +10,9 @@ This section is the player-written part of the wiki. Pages here cover
 topics that don't live in the game database — strategies, lore, beginner
 tips, build guides, event walkthroughs.
 
+## Main guide
+The most comprehensive guide for the game can be found in this Steam Community post: **[Pirate Souls Is Tough, Let me Guide you!](https://steamcommunity.com/sharedfiles/filedetails/?id=2833627512)**
+
 ## Want to add a page?
 
 Click **+ New page** on any edit form, or visit the
