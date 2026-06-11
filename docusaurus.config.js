@@ -14,10 +14,10 @@ const config = {
   tagline: 'Player-built guide to the high seas',
   favicon: 'img/logo.png',
 
-  url: 'https://diamondsouls.github.io',
-  baseUrl: '/pirate-souls-wiki/',
+  url: 'https://wiki.piratesouls.org',
+  baseUrl: '/',
 
-  organizationName: 'DiamondSouls',
+  organizationName: 'Diamond Souls',
   projectName: 'pirate-souls-wiki',
   trailingSlash: false,
 
