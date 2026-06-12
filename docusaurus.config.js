@@ -61,7 +61,7 @@ const config = {
     ({
       colorMode: { defaultMode: 'dark', respectPrefersColorScheme: true },
       navbar: {
-        title: '',
+        title: 'Pirate Souls',
         logo: { alt: 'Pirate Souls', src: 'img/logo.png' },
         items: [
           { to: '/guides', label: 'Guides', position: 'left' },
