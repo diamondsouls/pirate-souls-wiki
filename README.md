@@ -6,7 +6,7 @@ Built with [Docusaurus 3](https://docusaurus.io/).
 > **Heads up:** most pages here are auto-generated from the live game database
 > by tooling that lives in the private game repo. Anything between
 > `<!-- AUTOGEN:START -->` and `<!-- AUTOGEN:END -->` will be overwritten on
-> the next regeneration. Add your edits **outside** those markers — the
+> the next regeneration. Add your edits **outside** those markers; the
 > sections labeled "Notes", "Walkthrough", etc. are yours.
 
 ## Editing

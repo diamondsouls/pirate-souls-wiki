@@ -7,7 +7,7 @@ slug: /guides
 # Guides & Player Wiki
 
 This section is the player-written part of the wiki. Pages here cover
-topics that don't live in the game database — strategies, lore, beginner
+topics that don't live in the game database: strategies, lore, beginner
 tips, build guides, event walkthroughs.
 
 ## Main guide

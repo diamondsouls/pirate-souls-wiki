@@ -6,7 +6,7 @@ slug: /
 
 # Welcome to the Pirate Souls Wiki
 
-This wiki is a community knowledge base for everything in the game — items,
+This wiki is a community knowledge base for everything in the game: items,
 spells, NPCs, quests, classes, crafts, achievements. Most pages are
 auto-generated from the live game database; the rest is written by players
 like you.
@@ -25,8 +25,8 @@ You don't need a GitHub account, and you never have to use git.
 
 ## Writing a brand-new page
 
-Want to cover something the auto-generated pages don't — a beginner's
-guide, a lore essay, a boss strategy? Open the **[New page form](https://pirate-souls-wiki-edit.fly.dev/new)**
+Want to cover something the auto-generated pages don't, like a beginner's
+guide, a lore essay, or a boss strategy? Open the **[New page form](https://pirate-souls-wiki-edit.fly.dev/new)**
 on the edit service, pick a title, and write your guide. Once a moderator
 merges it, it'll appear under [Guides](/guides) automatically.
 
@@ -36,7 +36,7 @@ Every generated page has two parts:
 
 ```
 <!-- AUTOGEN:START -->
-... game stats, properties, images — refreshed from the database ...
+... game stats, properties, images, refreshed from the database ...
 <!-- AUTOGEN:END -->
 
 ## Notes
